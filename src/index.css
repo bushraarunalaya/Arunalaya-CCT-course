@@ -1,0 +1,121 @@
+@import "tailwindcss";
+
+@theme {
+  --color-amber-700: oklch(0.76 0.17 53.39);
+}
+
+:root {
+  --color-amber-700: oklch(0.76 0.17 53.39);
+  --font-heading: 'Outfit', sans-serif;
+  --font-sans: 'Plus Jakarta Sans', sans-serif;
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    color: #334155;
+    background-color: #F8FAFC;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, .font-heading {
+    font-family: var(--font-heading);
+    color: #0F172A;
+    letter-spacing: -0.015em;
+  }
+
+  p {
+    line-height: 1.7;
+  }
+}
+
+/* Authentic Kinesiology Tape Fabric Texture */
+.tape-texture {
+  background-image: 
+    radial-gradient(circle at 50% 50%, rgba(255,255,255,0.08) 1px, transparent 1px),
+    repeating-linear-gradient(45deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 2px, transparent 2px, transparent 4px),
+    repeating-linear-gradient(-45deg, rgba(0,0,0,0.05) 0px, rgba(0,0,0,0.05) 2px, transparent 2px, transparent 4px);
+  background-size: 6px 6px, 12px 12px, 12px 12px;
+}
+
+/* Wavy Kinesio Adhesive Wave Simulation */
+.tape-waves {
+  background-image: radial-gradient(ellipse 50% 120% at 50% 0%, rgba(255,255,255,0.18), transparent 70%);
+}
+
+/* Realistic tape strip shadow */
+.tape-shadow {
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.25);
+}
+
+.tape-shadow-sm {
+  box-shadow: 0 4px 14px -2px rgba(0, 0, 0, 0.3), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+}
+
+/* Continuous tape marquee keyframes with 3D hardware acceleration to prevent blur */
+@keyframes tape-scroll-left {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+@keyframes tape-scroll-right {
+  0% { transform: translate3d(-50%, 0, 0); }
+  100% { transform: translate3d(0, 0, 0); }
+}
+
+@keyframes tape-float {
+  0%, 100% { transform: translate3d(0, 0, 0) rotate(0deg); }
+  50% { transform: translate3d(0, -6px, 0) rotate(0.5deg); }
+}
+
+.animate-tape-left {
+  display: flex;
+  width: 200%;
+  animation: tape-scroll-left 32s linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.animate-tape-right {
+  display: flex;
+  width: 200%;
+  animation: tape-scroll-right 36s linear infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transform: translateZ(0);
+}
+
+.animate-tape-float {
+  animation: tape-float 6s ease-in-out infinite;
+  will-change: transform;
+  backface-visibility: hidden;
+}
+
+.crisp-tape {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f8fafc;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #FBB02E;
+}
