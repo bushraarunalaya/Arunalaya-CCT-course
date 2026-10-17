@@ -123,7 +123,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               >
                 <span>Enroll in CCT Course</span>
                 <span className="font-mono text-sm px-2.5 py-0.5 rounded-md bg-amber-700 text-white font-bold">
-                  ₹ 3600
+                  ₹3600
                 </span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
