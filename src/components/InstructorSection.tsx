@@ -1,5 +1,6 @@
 import React from 'react';
 import { Award, CheckCircle2, ShieldCheck, ArrowRight, UserCheck } from 'lucide-react';
+import physioApplyingTape from '../assets/images/physio_applying_tape_1792140962068.jpg';
 
 interface InstructorSectionProps {
   onOpenEnroll: () => void;
@@ -37,7 +38,7 @@ export const InstructorSection: React.FC<InstructorSectionProps> = ({ onOpenEnro
                 className="w-full h-[470px] object-cover object-top group-hover:scale-102 transition-transform duration-500"
                 referrerPolicy="no-referrer"
                 onError={(e) => {
-                  (e.target as HTMLImageElement).src = '/src/assets/images/physio_applying_tape_1792140962068.jpg';
+                  (e.target as HTMLImageElement).src = physioApplyingTape;
                 }}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />

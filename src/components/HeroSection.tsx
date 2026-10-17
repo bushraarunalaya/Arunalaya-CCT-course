@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ArrowRight, Play, CheckCircle2, ShieldCheck, Clock, Award, Sparkles, BookOpen } from 'lucide-react';
 import { ThreeTapeHero } from './ThreeTapeHero';
 import { PRICING_PLANS, ACCREDITATION_LOGOS, VIMEO_VIDEOS } from '../data/courseData';
+import heroAthleteTape from '../assets/images/hero_athlete_tape_1792140960116.jpg';
 
 interface HeroSectionProps {
   onOpenEnroll: () => void;
@@ -58,7 +59,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               Add <strong className="text-amber-700 font-mono font-bold">CCT</strong> (Certification in Clinical Taping) as Your Verified Professional Credential
             </p>
           </div>
-          <span className="text-xs font-mono text-slate-500 whitespace-nowrap">
+          <span className="text-xs font-mono text-slate-500 sm:whitespace-nowrap">
             Issued by Physioneeds Academy, London UK
           </span>
         </div>
@@ -118,7 +119,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               <button
                 type="button"
                 onClick={onOpenEnroll}
-                className="group relative inline-flex items-center justify-center gap-3 px-8 py-4 rounded-2xl text-base font-semibold text-white bg-amber-600 hover:bg-amber-700 shadow-md shadow-amber-600/20 active:scale-98 transition-all cursor-pointer"
+                className="group relative inline-flex items-center justify-center gap-3 px-5 sm:px-8 py-4 rounded-2xl text-sm sm:text-base font-semibold text-white bg-amber-600 hover:bg-amber-700 shadow-md shadow-amber-600/20 active:scale-98 transition-all cursor-pointer"
               >
                 <span>Enroll in CCT Course</span>
                 <span className="font-mono text-sm px-2.5 py-0.5 rounded-md bg-amber-700 text-white font-bold">
@@ -166,7 +167,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   className="relative w-16 h-12 rounded-xl overflow-hidden bg-slate-900 border border-slate-300 cursor-pointer group shrink-0"
                 >
                   <img
-                    src="/src/assets/images/hero_athlete_tape_1792140960116.jpg"
+                    src={heroAthleteTape}
                     alt="Athlete kinesiology tape demo preview"
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform"
                     referrerPolicy="no-referrer"
@@ -204,7 +205,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
             {ACCREDITATION_LOGOS.map((logo, idx) => (
               <div
                 key={idx}
-                className="flex flex-col items-center justify-center text-center p-3 rounded-2xl bg-white border border-slate-200/80 hover:border-amber-300 shadow-xs transition-colors w-full h-24"
+                className="flex flex-col items-center justify-center text-center p-3 rounded-2xl bg-white border border-slate-200/80 hover:border-amber-300 shadow-xs transition-colors w-full min-h-24"
               >
                 <img
                   src={logo.src}
@@ -255,7 +256,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 loading="lazy"
               />
             </div>
-            <div className="p-4 bg-white flex items-center justify-between text-xs text-slate-600">
+            <div className="p-4 bg-white flex items-center justify-between gap-3 text-xs text-slate-600">
               <span>{VIMEO_VIDEOS.heroPromo.caption}</span>
               <button
                 type="button"

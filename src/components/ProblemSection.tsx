@@ -1,5 +1,6 @@
 import React from 'react';
 import { HelpCircle, CheckCircle2, ArrowRight } from 'lucide-react';
+import physioApplyingTape from '../assets/images/physio_applying_tape_1792140962068.jpg';
 
 interface ProblemSectionProps {
   onOpenEnroll: () => void;
@@ -98,7 +99,7 @@ export const ProblemSection: React.FC<ProblemSectionProps> = ({ onOpenEnroll }) 
           <div className="lg:col-span-5 space-y-4">
             <div className="relative rounded-3xl overflow-hidden border border-slate-200 shadow-md group bg-white">
               <img
-                src="/src/assets/images/physio_applying_tape_1792140962068.jpg"
+                src={physioApplyingTape}
                 alt="Physiotherapist applying kinesiology tape with clinical reasoning"
                 className="w-full h-[470px] object-cover group-hover:scale-102 transition-transform duration-500"
                 referrerPolicy="no-referrer"
@@ -119,7 +120,7 @@ export const ProblemSection: React.FC<ProblemSectionProps> = ({ onOpenEnroll }) 
               </div>
             </div>
 
-            <div className="p-4 rounded-2xl bg-amber-50/60 border border-amber-200/80 text-xs text-slate-700 flex items-center justify-between">
+            <div className="p-4 rounded-2xl bg-amber-50/60 border border-amber-200/80 text-xs text-slate-700 flex flex-wrap items-center justify-between gap-x-4 gap-y-1">
               <span className="font-medium">📚 8 CPD Hours Accredited</span>
               <span className="font-mono text-amber-800 font-semibold">Arunalaya Healthcare Patel Nagar</span>
             </div>

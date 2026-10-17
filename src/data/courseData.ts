@@ -3,6 +3,11 @@
  * Source of Truth: https://www.e-physioneeds.com/courses/Certification-in-Taping-64525a61e4b070504d0f60c3
  */
 
+import heroAthleteTape from '../assets/images/hero_athlete_tape_1792140960116.jpg';
+import physioApplyingTape from '../assets/images/physio_applying_tape_1792140962068.jpg';
+import rehabAnkleTape from '../assets/images/rehab_ankle_tape_1792140960680.jpg';
+import runnerKneeTape from '../assets/images/runner_knee_tape_1792140959979.jpg';
+
 export interface PricingPlan {
   currency: string;
   symbol: string;
@@ -192,7 +197,7 @@ export const CLINICAL_APPLICATIONS = [
     condition: 'Patellofemoral Pain Syndrome (PFPS)',
     bodyArea: 'Knee & Quadriceps',
     system: 'Kinesiology + Semi-Elastic',
-    image: '/src/assets/images/runner_knee_tape_1792140959979.jpg',
+    image: runnerKneeTape,
     summary: 'Corrects lateral patellar tilt, unloads the infrapatellar tendon, and enhances vastus medialis obliquus (VMO) neuromotor firing during deep squatting and running strides.'
   },
   {
@@ -200,7 +205,7 @@ export const CLINICAL_APPLICATIONS = [
     condition: 'Subacromial Impingement & Anterior Laxity',
     bodyArea: 'Glenohumeral Joint & Scapula',
     system: 'Rigid Mechanical Lock + Kinesio Fascia',
-    image: '/src/assets/images/physio_applying_tape_1792140962068.jpg',
+    image: physioApplyingTape,
     summary: 'Depresses the humeral head to prevent subacromial pinching, repositions the scapula into upward rotation, and stabilizes anterior joint translation during overhead sports.'
   },
   {
@@ -208,7 +213,7 @@ export const CLINICAL_APPLICATIONS = [
     condition: 'Inversion Sprains & Chronic Instability',
     bodyArea: 'Ankle Mortise & Subtalar Joint',
     system: 'Rigid Figure-of-6 & Heel Lock',
-    image: '/src/assets/images/rehab_ankle_tape_1792140960680.jpg',
+    image: rehabAnkleTape,
     summary: 'Prevents sudden inversion and plantarflexion collapse while maintaining active dorsiflexion propulsion for sprinting, jumping, and court pivoting.'
   },
   {
@@ -216,7 +221,7 @@ export const CLINICAL_APPLICATIONS = [
     condition: 'Upper Crossed Syndrome & Tech-Neck',
     bodyArea: 'Thoracic Spine & Scapular Retractors',
     system: 'X-Pattern & Y-Strip Kinesiology Tape',
-    image: '/src/assets/images/hero_athlete_tape_1792140960116.jpg',
+    image: heroAthleteTape,
     summary: 'Constant gentle proprioceptive retraction cue across the rhomboids and lower trapezius, relieving anterior chest tightness and neck extensor spasm.'
   }
 ];

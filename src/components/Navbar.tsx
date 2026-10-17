@@ -25,34 +25,34 @@ export const Navbar: React.FC<NavbarProps> = ({
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-md border-b border-slate-200/80 shadow-xs transition-all">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-3 sm:gap-6">
         
         {/* Brand Zone with Official Physioneeds Academy Logo */}
         <a
           href="#"
-          className="flex items-center gap-3.5 shrink-0 group py-1"
+          className="flex items-center gap-2 sm:gap-3.5 min-w-0 xl:shrink-0 group py-1"
         >
           <img
             src={OFFICIAL_LOGO_URL}
             alt="Physioneeds Academy Logo"
-            className="h-10 sm:h-11 w-auto object-contain"
+            className="h-9 sm:h-11 w-auto object-contain shrink-0"
             referrerPolicy="no-referrer"
             onError={(e) => {
               (e.target as HTMLElement).style.display = 'none';
             }}
           />
-          <div className="flex flex-col">
-            <span className="text-base sm:text-lg font-heading font-bold tracking-tight text-slate-900 leading-none">
+          <div className="flex flex-col min-w-0">
+            <span className="text-sm sm:text-lg font-heading font-bold tracking-tight text-slate-900 leading-none truncate">
               Physioneeds Academy
             </span>
-            <span className="text-xs font-medium text-amber-700 tracking-wide mt-1">
+            <span className="text-[10px] sm:text-xs font-medium text-amber-700 tracking-wide mt-1 truncate">
               Certificate in Clinical Taping (CCT)
             </span>
           </div>
         </a>
 
         {/* 4–5 Clean Navigation Links with Eye-Friendly Typography */}
-        <nav className="hidden md:flex items-center gap-7 text-sm font-medium text-slate-600">
+        <nav className="hidden xl:flex items-center gap-7 text-sm font-medium text-slate-600">
           {navLinks.map((link) => (
             <a
               key={link.label}
@@ -65,7 +65,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         </nav>
 
         {/* Actions & Currency Switcher */}
-        <div className="flex items-center gap-3 shrink-0">
+        <div className="flex items-center gap-2 sm:gap-3 shrink-0">
           {/* Quick Currency Selector */}
           <div className="hidden sm:flex items-center bg-slate-100 border border-slate-200/90 rounded-xl p-0.5 text-xs text-slate-600">
             {(['INR', 'USD'] as const).map((curr) => (
@@ -87,17 +87,17 @@ export const Navbar: React.FC<NavbarProps> = ({
           <button
             type="button"
             onClick={onOpenEnroll}
-            className="group relative inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-amber-600 hover:bg-amber-700 shadow-sm active:scale-98 transition-all whitespace-nowrap shrink-0 cursor-pointer"
+            className="group relative inline-flex items-center justify-center gap-2 px-3 sm:px-5 py-2 sm:py-2.5 rounded-xl text-xs sm:text-sm font-semibold text-white bg-amber-600 hover:bg-amber-700 shadow-sm active:scale-98 transition-all whitespace-nowrap shrink-0 cursor-pointer"
           >
             <span>Enroll Now</span>
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+            <ArrowRight className="hidden sm:block w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
           </button>
 
           {/* Mobile menu toggle */}
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors"
+            className="xl:hidden p-2 rounded-xl text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors"
             aria-label="Toggle Navigation Menu"
           >
             {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -107,7 +107,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
       {/* Mobile Drawer */}
       {mobileMenuOpen && (
-        <div className="md:hidden border-b border-slate-200 bg-white px-5 py-4 space-y-3 shadow-lg">
+        <div className="xl:hidden border-b border-slate-200 bg-white px-5 py-4 space-y-3 shadow-lg max-h-[calc(100vh-5rem)] overflow-y-auto">
           <div className="flex items-center justify-between pb-3 border-b border-slate-100 text-xs text-slate-600">
             <span className="font-medium">Select Currency:</span>
             <div className="flex items-center gap-1">

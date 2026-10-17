@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { Play, ArrowRight, Video, CheckCircle, Clock } from 'lucide-react';
 import { VIMEO_VIDEOS } from '../data/courseData';
+import physioApplyingTape from '../assets/images/physio_applying_tape_1792140962068.jpg';
+import rehabAnkleTape from '../assets/images/rehab_ankle_tape_1792140960680.jpg';
+import runnerKneeTape from '../assets/images/runner_knee_tape_1792140959979.jpg';
 
 interface PracticalDemosSectionProps {
   onOpenEnroll: () => void;
@@ -19,7 +22,7 @@ export const PracticalDemosSection: React.FC<PracticalDemosSectionProps> = ({ on
       vimeoUrl: VIMEO_VIDEOS.demo1.url,
       duration: 'HD Practical Demo',
       badge: 'Core Clinical Taping',
-      poster: '/src/assets/images/physio_applying_tape_1792140962068.jpg'
+      poster: physioApplyingTape
     },
     {
       key: 'demo2',
@@ -29,7 +32,7 @@ export const PracticalDemosSection: React.FC<PracticalDemosSectionProps> = ({ on
       vimeoUrl: VIMEO_VIDEOS.demo2.url,
       duration: 'HD Technique Demo',
       badge: 'Vector Correction',
-      poster: '/src/assets/images/rehab_ankle_tape_1792140960680.jpg'
+      poster: rehabAnkleTape
     },
     {
       key: 'demo3',
@@ -39,7 +42,7 @@ export const PracticalDemosSection: React.FC<PracticalDemosSectionProps> = ({ on
       vimeoUrl: VIMEO_VIDEOS.demo3.url,
       duration: 'HD Case Demonstration',
       badge: 'Advanced Multi-Layer',
-      poster: '/src/assets/images/runner_knee_tape_1792140959979.jpg'
+      poster: runnerKneeTape
     }
   ];
 
@@ -206,7 +209,7 @@ export const PracticalDemosSection: React.FC<PracticalDemosSectionProps> = ({ on
             {/* Runner Knee Patellar Tracking Visual Teaser */}
             <div className="mt-6 rounded-2xl overflow-hidden border border-slate-200 bg-white relative group shadow-xs">
               <img
-                src="/src/assets/images/runner_knee_tape_1792140959979.jpg"
+                src={runnerKneeTape}
                 alt="Runner knee patellar tracking kinesiology tape"
                 className="w-full h-44 object-cover group-hover:scale-105 transition-transform duration-300"
                 referrerPolicy="no-referrer"

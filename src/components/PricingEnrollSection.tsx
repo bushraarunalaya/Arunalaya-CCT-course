@@ -54,7 +54,7 @@ export const PricingEnrollSection: React.FC<PricingEnrollSectionProps> = ({
 
         {/* Currency Switcher Tabs */}
         <div className="flex justify-center mb-10">
-          <div className="inline-flex items-center p-1.5 rounded-2xl bg-white border border-slate-200 shadow-xs">
+          <div className="inline-flex max-w-full items-center p-1.5 rounded-2xl bg-white border border-slate-200 shadow-xs">
             {Object.keys(PRICING_PLANS).map((curr) => {
               const isSelected = selectedCurrency === curr;
               return (
@@ -62,7 +62,7 @@ export const PricingEnrollSection: React.FC<PricingEnrollSectionProps> = ({
                   key={curr}
                   type="button"
                   onClick={() => onSelectCurrency(curr)}
-                  className={`px-5 py-2 rounded-xl text-xs sm:text-sm font-mono font-medium transition-all cursor-pointer ${
+                  className={`px-2.5 sm:px-5 py-2 rounded-xl text-[11px] sm:text-sm font-mono font-medium transition-all cursor-pointer ${
                     isSelected
                       ? 'bg-amber-600 text-white font-bold shadow-xs'
                       : 'text-slate-600 hover:text-slate-900'

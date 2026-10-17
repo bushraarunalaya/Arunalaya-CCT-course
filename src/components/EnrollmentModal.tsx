@@ -86,7 +86,7 @@ export const EnrollmentModal: React.FC<EnrollmentModalProps> = ({
         </div>
 
         {/* Selected Plan Summary Banner */}
-        <div className="p-4 rounded-2xl bg-amber-50/60 border border-amber-200/80 flex items-center justify-between">
+        <div className="p-4 rounded-2xl bg-amber-50/60 border border-amber-200/80 flex flex-wrap items-center justify-between gap-3">
           <div>
             <div className="text-[11px] font-mono text-slate-500 font-medium">Selected Currency Plan:</div>
             <div className="text-xl font-heading font-bold text-slate-900 flex items-baseline gap-2">

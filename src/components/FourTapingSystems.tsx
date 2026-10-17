@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ArrowRight, CheckCircle2, Layers, Shield, Zap, Activity } from 'lucide-react';
 import { FOUR_TAPING_SYSTEMS } from '../data/courseData';
+import runnerKneeTape from '../assets/images/runner_knee_tape_1792140959979.jpg';
 
 interface FourTapingSystemsProps {
   onOpenEnroll: () => void;
@@ -136,7 +137,7 @@ export const FourTapingSystems: React.FC<FourTapingSystemsProps> = ({ onOpenEnro
                   className="w-full h-[360px] sm:h-[400px] object-cover group-hover:scale-102 transition-transform duration-500"
                   referrerPolicy="no-referrer"
                   onError={(e) => {
-                    (e.target as HTMLImageElement).src = '/src/assets/images/runner_knee_tape_1792140959979.jpg';
+                    (e.target as HTMLImageElement).src = runnerKneeTape;
                   }}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-900/80 via-transparent to-transparent" />
