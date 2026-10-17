@@ -37,7 +37,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           <div className="flex items-center gap-2.5 text-xs sm:text-sm font-medium tracking-wide">
             <span className="w-2.5 h-2.5 rounded-full bg-amber-500 animate-pulse" />
             <span className="font-semibold text-amber-900">Limited-Time Enrollment Offer: 1 Month · 8 CPD Hours</span>
-            <span className="hidden md:inline text-slate-600 font-mono">· Clinical Taping Certification at ₹ 3600</span>
+            <span className="hidden md:inline text-slate-600 font-mono">· Clinical Taping Certification at ₹3600</span>
           </div>
 
           <button
