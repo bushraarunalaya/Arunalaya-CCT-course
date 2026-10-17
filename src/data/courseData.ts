@@ -31,7 +31,7 @@ export const PRICING_PLANS: Record<string, PricingPlan> = {
   USD: {
     currency: 'USD',
     symbol: '$',
-    price: 49,
+    price: 37.91,
     mrp: 160,
     label: 'Lifetime Access',
     badge: '🔥 Global Online Launch Special',

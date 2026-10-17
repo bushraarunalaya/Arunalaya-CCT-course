@@ -37,7 +37,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
           <div className="flex items-center gap-2.5 text-xs sm:text-sm font-medium tracking-wide">
             <span className="w-2.5 h-2.5 rounded-full bg-amber-500 animate-pulse" />
             <span className="font-semibold text-amber-900">Limited-Time Enrollment Offer: 1 Month · 8 CPD Hours</span>
-            <span className="hidden md:inline text-slate-600 font-mono">· Clinical Taping Certification at {currentPlan.symbol}{currentPlan.price.toLocaleString('en-IN')}</span>
+            <span className="hidden md:inline text-slate-600 font-mono">· Clinical Taping Certification at 3600</span>
           </div>
 
           <button
@@ -123,7 +123,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               >
                 <span>Enroll in CCT Course</span>
                 <span className="font-mono text-sm px-2.5 py-0.5 rounded-md bg-amber-700 text-white font-bold">
-                  {currentPlan.symbol}{currentPlan.price.toLocaleString('en-IN')}
+                  3600
                 </span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
