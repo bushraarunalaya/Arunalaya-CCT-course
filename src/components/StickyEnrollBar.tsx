@@ -57,10 +57,10 @@ export const StickyEnrollBar: React.FC<StickyEnrollBarProps> = ({
 
           <div className="flex items-baseline gap-1.5 font-mono">
             <span className="text-base sm:text-lg font-bold text-slate-900">
-              {currentPlan.symbol}{currentPlan.price.toLocaleString('en-IN')}
+              ₹ 3600
             </span>
             <span className="text-xs text-slate-400 line-through hidden sm:inline">
-              ₹ 3600
+              ₹ 12000
             </span>
             <span className="text-xs text-emerald-700 font-semibold hidden lg:inline">
               · 70% Off Lifetime
